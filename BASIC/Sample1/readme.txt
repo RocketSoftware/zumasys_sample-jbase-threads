@@ -13,6 +13,7 @@ consult the Programmers Reference Manual (PRM)
 	CATALOG . fast.b
 
 2. Run the thread program.
+
 ```
 C:\jBASE\CurrentVersion\samples\Threads\BASIC\Sample1>thread.exe
 Thread status=
