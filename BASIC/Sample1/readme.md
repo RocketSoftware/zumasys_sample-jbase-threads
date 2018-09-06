@@ -5,12 +5,11 @@ consult the Programmers Reference Manual (PRM)
 
 1. BASIC and CATALOG all three programs;
 
-	BASIC . thread.b
-	CATALOG . thread.b
-	BASIC . slow.b
-	CATALOG . slow.b
-	BASIC . fast.b
-	CATALOG . fast.b
+```
+jcompile thread.b
+jcompile slow.b
+jcompile fast.b
+```
 
 2. Run the thread program.
 
