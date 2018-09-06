@@ -8,18 +8,62 @@
   To compile sample :
 
    jcompile basic_main.b
-   BASIC . t1.b
-   BASIC . t2.b
-   BASIC . t3.b
-   BASIC . f_t1.b
-   BASIC . f_t2.b
-   CATALOG . t1.b
-   CATALOG . t2.b
-   CATALOG . t3.b
-   CATALOG . f_t1.b
-   CATALOG . f_t2.b
+   jcompile t1.b
+   jcompile t2.b
+   jcompile t3.b
+   jcompile f_t1.b
+   jcompile f_t2.b
+   
+  To run sample, 
 
-  To run sample, use the 'run_program' shell script :
+   windows - Windows will always look in your current directory for executables and dll's
+   
+   basic_main
 
-   ./run_program 
+   linux - You must tell linux to look in the current directory for the shared libraries.
+   
+   export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:./
+   ./basic_main
 
+It may take a few CTRL-C (break) to fully get out of this program since you are really running multiple programs via the theads.
+
+
+bash-4.2$ ./basic_main
+[ 417 ] File FILE_T1]D created , type = JP
+[ 417 ] File FILE_T1 created , type = JP
+[ 417 ] File FILE_T2]D created , type = JP
+[ 417 ] File FILE_T2 created , type = JP
+Thread IDs running : 4087DFF8957F0000
+t1 started. rc [0] handle [00271CF1957F0000]
+t1 started. rc [0] handle [00179CF0957F0000]
+t2 started. rc [0] handle [00E7FBEF957F0000]
+t2 started. rc [0] handle [00D77BEF957F0000]
+JBASETHREADCreate: cannot find program
+t3 started. rc [-1] handle []
+f_t1 started. rc [0] handle [0097DBEE957F0000]
+f_t2 started. rc [0] handle [00573BEE957F0000]
+t1: I = 1
+t1: I = 1
+t2: I = 1
+t2: I = 1
+Thread IDs running : 4087DFF8957F0000   00271CF1957F0000   00179CF0957F0000   00E7FBEF957F0000   00D77BEF957F0000   0097DBEE957F0000   00573BEE957F0000
+t2: I = 2
+t2: I = 2
+Thread IDs running : 4087DFF8957F0000   00271CF1957F0000   00179CF0957F0000   00E7FBEF957F0000   00D77BEF957F0000   0097DBEE957F0000   00573BEE957F0000
+t1: I = 2
+t1: I = 2
+t2: I = 3
+t2: I = 3
+Thread IDs running : 4087DFF8957F0000   00271CF1957F0000   00179CF0957F0000   00E7FBEF957F0000   00D77BEF957F0000   0097DBEE957F0000   00573BEE957F0000
+t2: I = 4
+t2: I = 4
+^CjBASE debugger->jBASE debugger->Interrupt signal
+Interrupt signal
+Interrupt signal
+Interrupt signal
+Source changed to ./t1.b
+0004    SLEEP 2
+jBASE debugger->Interrupt signal
+Source changed to ./t2.b
+Source changed to ./t2.b
+0004    SLEEP 1
