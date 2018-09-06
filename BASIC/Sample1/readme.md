@@ -3,7 +3,7 @@ jBASE jBASIC introduced in jBASE 4.1. Note - jBC.h must be INCLUDEd
 to use these keywords. For more information on these statements,
 consult the Programmers Reference Manual (PRM)
 
-1. BASIC and CATALOG all three programs;
+1. Compile all the programs.  For this example we will use the jcompile verb that will compile the executables/dlls directly into the sample directory.  You can also copy these source files to your normal sandbox area and use BASIC and COMPILE normally.  For more information see the jBase documentation around how jBase builds C code.
 
 ```
 jcompile thread.b
