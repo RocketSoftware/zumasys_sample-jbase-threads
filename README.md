@@ -9,16 +9,18 @@ a session that can run jbase commands.  The easiest way to normally do this is t
 type cmd on windows or bash on linux to get out to your command prompt.  Then cd to the sample directory where you extracted these
 examples
 
-Special considerations per platform
+# Special considerations per platform
 
-Linux
+## Linux
 
 Linux will not by default look in your current directory for either executables or shared libaries.  This means you must put ./ in
 front of any executable request to look in your existing directory (example #./test_program).  For the shared libraries you
 must update your LD_LIBRARY_PATH environment variable to look in your current directory.  If you make a mistake enter exit to return
 back to your jsh environment and start over.
 
+```
 # export LD_LIBRARY_PATH=$LD_LIBARY_PATH:./
+```
 
 You can also move these files over to your normal BP work area and compile them there normally.
 
