@@ -9,7 +9,15 @@ thread_handle_4		= ""
 thread_handle_5		= ""
 thread_handle_6		= ""
 thread_handle_7		= ""
-			     
+
+* first setup our files
+
+EXECUTE "DELETE-FILE FILE_T1"
+EXECUTE "DELETE-FILE FILE_T2"
+
+EXECUTE "CREATE-FILE FILE_T1 TYPE=JP 1 63"
+EXECUTE "CREATE-FILE FILE_T2 TYPE=JP 1 63"
+
 JBASETHREADStatus( thread_list_initial )
 CRT "Thread IDs running : ":CHANGE(thread_list_initial,@AM,"   ")
 
