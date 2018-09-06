@@ -1,0 +1,78 @@
+INCLUDE JBC.h
+
+OPEN "SINGLE1" TO FH1 ELSE STOP 201, "SINGLE1"
+OPEN "SINGLE2" TO FH2 ELSE STOP 201, "SINGLE2"
+OPEN "SINGLE3" TO FH3 ELSE STOP 201, "SINGLE3"
+OPEN "SINGLE4" TO FH4 ELSE STOP 201, "SINGLE4"
+
+PRINT "Single threaded program"
+PRINT "Reading records from 4 files ... "
+
+t1 = SYSTEM(12)
+
+MAX_RECORDS = 16000
+			     
+FOR I = 1 TO MAX_RECORDS
+
+	ITEMID = "ITEM":I
+
+	MY_DATA = ""
+
+	READ MY_DATA FROM FH1,ITEMID ON ERROR
+		CRT "Error reading from file"
+	END THEN
+	END
+
+NEXT I
+
+MAX_RECORDS = 14000
+			     
+FOR I = 1 TO MAX_RECORDS
+
+	ITEMID = "ITEM":I
+
+	MY_DATA = ""
+
+	READ MY_DATA FROM FH2,ITEMID ON ERROR
+		CRT "Error reading from file"
+	END THEN
+	END
+
+NEXT I
+MAX_RECORDS = 18000
+			     
+FOR I = 1 TO MAX_RECORDS
+
+	ITEMID = "ITEM":I
+
+	MY_DATA = ""
+
+	READ MY_DATA FROM FH3,ITEMID ON ERROR
+		CRT "Error reading from file"
+	END THEN
+	END
+
+NEXT I
+MAX_RECORDS = 16000
+			     
+FOR I = 1 TO MAX_RECORDS
+
+	ITEMID = "ITEM":I
+
+	READ MY_DATA FROM FH4,ITEMID ON ERROR
+		CRT "Error reading from file"
+	END THEN
+	END
+
+NEXT I
+
+t2 = SYSTEM(12)
+
+time_taken = t2 - t1
+
+PRINT "Time taken: ":time_taken
+
+CLOSE FH4
+CLOSE FH3
+CLOSE FH2
+CLOSE FH1

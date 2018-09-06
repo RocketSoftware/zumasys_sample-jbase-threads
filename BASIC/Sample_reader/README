@@ -1,0 +1,33 @@
+
+
+  Sample_reader - simple single threaded file reader and simple multi threaded file reader
+  
+
+  To compile single threaded sample :
+
+   jcompile single_reader.b
+
+  To run : 
+
+   ./single_reader
+
+
+  Compare with multi threaded sample
+
+
+  To compile multi threaded sample :
+
+   jcompile multi_reader.b
+   BASIC . mult_r1.b
+   BASIC . mult_r2.b
+   BASIC . mult_r3.b
+   BASIC . mult_r4.b
+   CATALOG . mult_r1.b
+   CATALOG . mult_r2.b
+   CATALOG . mult_r3.b
+   CATALOG . mult_r4.b
+
+  To run sample :
+
+   ./multi_reader
+

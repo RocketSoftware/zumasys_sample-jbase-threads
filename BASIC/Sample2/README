@@ -1,0 +1,25 @@
+
+
+  Sample2 - very simple threads run via BASIC
+  
+  Threads do very simple IO to screen and to file
+
+
+  To compile sample :
+
+   jcompile basic_main.b
+   BASIC . t1.b
+   BASIC . t2.b
+   BASIC . t3.b
+   BASIC . f_t1.b
+   BASIC . f_t2.b
+   CATALOG . t1.b
+   CATALOG . t2.b
+   CATALOG . t3.b
+   CATALOG . f_t1.b
+   CATALOG . f_t2.b
+
+  To run sample, use the 'run_program' shell script :
+
+   ./run_program 
+

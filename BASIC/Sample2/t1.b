@@ -1,0 +1,5 @@
+
+FOR I = 1 TO 100
+	PRINT "t1: I = ":I
+	SLEEP 2
+NEXT I

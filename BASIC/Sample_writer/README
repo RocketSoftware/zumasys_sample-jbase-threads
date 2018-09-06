@@ -1,0 +1,33 @@
+
+
+  Sample_writer - simple single threaded file writer and simple multi threaded file writer
+  
+
+  To compile single threaded sample :
+
+   jcompile single_writer.b
+
+  To run : 
+
+   ./single_writer
+
+
+  Compare with multi threaded sample
+
+
+  To compile multi threaded sample :
+
+   jcompile multi_writer.b
+   BASIC . mult_w1.b
+   BASIC . mult_w2.b
+   BASIC . mult_w3.b
+   BASIC . mult_w4.b
+   CATALOG . mult_w1.b
+   CATALOG . mult_w2.b
+   CATALOG . mult_w3.b
+   CATALOG . mult_w4.b
+
+  To run sample :
+
+   ./multi_writer
+

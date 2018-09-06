@@ -1,0 +1,19 @@
+
+OPEN "FILE_T1" TO FH ELSE STOP 201, "FILE_T1"
+
+ITEMID  = "Item1"
+MY_DATA = "blah_some_data"
+
+FOR I = 1 TO 100
+
+	IID = ITEMID:I
+
+	WRITE MY_DATA TO FH,IID ON ERROR
+		PRINT "Error, writing to file"
+	END
+
+	SLEEP 2
+NEXT I
+
+
+CLOSE FH
